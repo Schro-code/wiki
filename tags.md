@@ -1,0 +1,19 @@
+# Wiki — Tag Registry
+
+User-defined labels for classifying wiki pages. Add tags to the `tags:` frontmatter of any page.
+Never invent a new tag without adding it here first.
+
+| Tag | When to use |
+|---|---|
+| #harness | Pages about the scaffolding layer that wraps an LLM: core loop, context management, tool execution, agent infrastructure |
+| #kubernetes | Pages about Kubernetes concepts, commands, configuration, and tooling (kubectl, kustomize, minikube, etc.) |
+| #labs | Index and references to hands-on learning labs in `labs/` |
+| #projects | Index and references to work project knowledge bases in `projects/` |
+| #graphrag | Pages about GraphRAG: the core pattern, graph construction pipeline, local/global search, Microsoft GraphRAG implementation |
+| #neo4j | Pages about Neo4j: graph database concepts, Cypher query language, data modeling, and use cases |
+| #system-design | Pages about system design fundamentals: networking, protocols, IP addressing, communication patterns, infrastructure |
+| #rag | Pages about Retrieval-Augmented Generation: chunking, embeddings, vector databases, retrieval metrics, hybrid search, filtered search |
+| #agent-knowledge | Pages about knowledge systems with bitemporality, ontology-driven extraction, conflict governance, reasoning engines, and agent query loops |
+| #agentic-system-design | Pages about the discipline of designing reliable agentic systems: structural patterns, failure modes, multi-agent coordination, observability, and literature |
+| #tts | Pages about text-to-speech systems: digital audio, FFT, mel spectrogram, acoustic model, vocoder, Kokoro |
+| #inference-engineering | Pages about serving and operating LLMs: model formats, quantization, inference engines (Ollama, llama.cpp), gateways (LiteLLM), and observability |

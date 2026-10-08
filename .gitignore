@@ -1,0 +1,21 @@
+# Labs folder contains independent git repos — excluded intentionally
+/labs/
+
+# Projects folder contains work/private content
+/projects/
+
+# Claude Code project settings (local only)
+.claude/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Obsidian workspace state (personal, not shared)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Raw attachments (large binaries)
+raw/**/*.pdf
+raw/**/*.mp4
+raw/**/*.zip
