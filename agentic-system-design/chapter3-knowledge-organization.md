@@ -246,7 +246,7 @@ Is structured indexing worth the cost?
 - [[chapter3-rag-basics]] — retrieval pipeline (dense + sparse + hybrid + reranking) that operates on the structured index built here
 - [[chapter3-user-memory-systems]] — knowledge organization for user memory specifically; structured indexing applies to the product knowledge layer
 - [[../rag/hybrid-search]] — the retrieval stage downstream of indexing
-- [[../rag/graphrag]] — GraphRAG in depth (entity extraction, community detection, local vs global search)
+- [[graphrag/microsoft-graphrag]] — GraphRAG in depth (entity extraction, community detection, local vs global search)
 
 ## Tags
 

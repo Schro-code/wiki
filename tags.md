@@ -17,3 +17,5 @@ Never invent a new tag without adding it here first.
 | #agentic-system-design | Pages about the discipline of designing reliable agentic systems: structural patterns, failure modes, multi-agent coordination, observability, and literature |
 | #tts | Pages about text-to-speech systems: digital audio, FFT, mel spectrogram, acoustic model, vocoder, Kokoro |
 | #inference-engineering | Pages about serving and operating LLMs: model formats, quantization, inference engines (Ollama, llama.cpp), gateways (LiteLLM), and observability |
+| #book | Reference material from a complete book embedded in a domain folder — not a wiki concept page |
+| #scm | Pages about software configuration management: versioning, branching, fork management, release engineering, patch series, supply chain |

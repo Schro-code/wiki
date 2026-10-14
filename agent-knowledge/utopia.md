@@ -2,7 +2,7 @@
 domain: agent-knowledge
 tags: [agent-knowledge]
 sources: []
-updated: 2026-09-08
+updated: 2026-10-14
 ---
 
 # Utopia — Enterprise Knowledge System
@@ -179,7 +179,7 @@ Three sources, layered:
 
 **2. User editing** — via the ontology workbench in the UI. You write descriptions, mark relations as `functional` or `transitive`, set domain/range. Descriptions feed directly into the LLM extraction prompt — better descriptions produce better extractions.
 
-**3. Auto-extension** — when the LLM extracts a fact whose predicate doesn't exist in the ontology, the raw predicate is recorded on the evidence row. Once a predicate appears in ≥2 documents, the system proposes (or automatically creates, if enabled) a new relation type. Reversible at any time.
+**3. Ontology Agent (ADR 0061, rc9)** — replaced the old auto-extension heuristic. An LLM-driven agent reads unbound phrase signatures and kind words from the open graph, considers the current ontology and user-defined "competency questions," then proposes new entity types, relation types, properties, and implication rules — each with a definition, examples, and the questions it serves. Proposals require human approval (the ontology remains a contract per ADR 0012). Measured by two numbers: questions answered correctly and proposals people change. The old `Suggest` path, auto-extension, and adoption-by-wording were retired entirely.
 
 ### Relation properties and their effects
 
@@ -599,13 +599,145 @@ The system needs only two things configured before it works:
 1. A **chat LLM endpoint** (OpenAI-compatible: OpenAI, DeepSeek, Ollama, vLLM...)
 2. An **embedding endpoint** (same: any OpenAI-compatible embedder)
 
-Upload a document and the system works. The ontology is pre-seeded from the pack chosen at knowledge base creation. The extraction prompt is built automatically from the current ontology. The vocabulary grows with your documents through auto-extension.
+Upload a document and the system works. The ontology is pre-seeded from the pack chosen at knowledge base creation. The extraction prompt is built automatically from the current ontology. The vocabulary grows through the ontology agent, which proposes additions from the open graph for human approval.
 
 Optional tuning (not required):
 - Edit ontology descriptions → better extraction quality
 - Mark a relation `functional` → enables conflict detection
 - Mark a relation `transitive` → enables reasoning
 - Turn on `materialize_inferences` → reasoning engine runs periodically
+
+---
+
+## rc9 sync — new capabilities (October 2026)
+
+222 upstream commits merged. The major new systems and improvements:
+
+### Ontology Agent (ADR 0061)
+
+Replaces the old heuristic ontology growth loop entirely. The agent:
+- Reads unbound phrase signatures and classless kind words from the open graph
+- Proposes entity types, relation types, properties, and implication rules
+- Each proposal carries a definition, examples, the signatures it would bind, and the competency questions it serves
+- Requires human approval — the ontology remains a contract (ADR 0012)
+- Approved elements carry regression cases that are rerun when definitions change
+- Measured by two numbers: questions answered correctly, and proposals people edit/reject
+
+The old `Suggest` path, auto-extension, and adoption-by-wording were retired (5,167 lines removed).
+
+### Errata Agent
+
+A post-extraction quality gate. For each document's typed facts:
+- Receives structural flags (domain/range violations, absent names, non-date values in date fields)
+- The LLM judges each fact as keep/retract/revise, must quote the document verbatim
+- Retraction requires two votes and a flag; unflagged facts are never retracted by the agent alone
+- Actions pass the impact gate before modifying the graph
+
+### Business Rules with Joins (ADR 0047)
+
+The reasoning engine now supports cross-entity rules:
+- Rules can join two entities through a shared relation and conclude new relations
+- Join evaluation is bucketed by subject (5.9s → 105ms for 100K pairs)
+- Rule definitions are now versioned (ADR 0060): every edit opens a new version snapshot, and derived conclusions name the version they were drawn under
+
+### Temporal Reasoning Overhaul (ADR 0064)
+
+Fundamentally reworks how time expressions are handled during extraction:
+- Time context is built per-chunk during extraction (not a single post-extraction call)
+- Each statement is individually attested by the reference point in force at its quote's position
+- Relative expressions ("three months later") resolve against the section's own date
+- A fact with no time holds at every moment (null attestation); upload time no longer enters world time
+- Deleted document attestation rebuilds from remaining evidence
+
+Measured improvements: time expressions recorded rose from 18–20/29 to 27–29/29; heading-scoped dates went from 0/6 to 18/18.
+
+### Name-Vector Recall
+
+Entity recall now matches mentions by embedding vector, so abbreviations, transliterations, and alternate scripts find the same entity without exact string match. Names carrying different numbers are no longer paired ("Report Q1" vs "Report Q2" stay distinct).
+
+### Phrase Alignment Improvements
+
+- Staleness detection based on input fingerprint instead of timestamp (ADR 0053)
+- Batches signatures by candidates, shortlists by embedding distance
+- Inheritance-aware candidate properties
+- Human phrase decisions are now asynchronous (ADR 0051): HTTP 202 with job ID
+- Single-date statements bound to a state property now carry `marks` (start/end/none)
+
+### Chat & UX
+
+| Feature | Description |
+|---|---|
+| **Stop cancels generation** (ADR 0063) | Stop button cancels server-side generation and preserves the partial answer |
+| **Copy answers & code blocks** | Each answer and code block has a copy button; works without Clipboard API |
+| **Chat pagination** | Older conversations reachable through bounded pagination |
+| **Failed answer retry** | Retry a failed question in place without storing a duplicate entry |
+| **Long conversation handling** | Old exchanges are shed to stay within context window; context refusals are recovered |
+| **Graph citations with sentences** | Graph answers cite the specific sentence each fact was read from |
+| **Send question once** | Each question sent to the model once (was twice before) |
+| **i18n** | Chat step fields, stream failure codes, and error messages localized |
+
+### Parsers & Ingest
+
+| Parser | Improvements |
+|---|---|
+| **PPTX** | Slide tables preserve rows/columns; merged cells read; line breaks keep words apart; cover date attests every slide |
+| **DOCX** | Headings parsed as headings (per-section chunking/dating); text boxes read once; non-breaking hyphens handled; paragraph-to-Markdown block breaks fixed |
+| **Spreadsheets** | Dates read as displayed date (not Excel day count); 15-digit precision; merged cells filled; capped content warns what was left out |
+| **PDF** | Characters use actual glyphs, not look-alike radicals/ligatures |
+| **OCR** (ADR 0065) | Provider choice: MinerU (default) or Volcengine Ark vision model, configurable per workspace |
+| **Notion** | Nested blocks read recursively; page bodies preserved on failures; table cells imported |
+| **CSV** | Empty fields preserved; delimited records keep their own row |
+| **Chunks** | Named by section; date detection reads filename first; Markdown code blocks excluded from time scoping |
+
+### Data Sources & Integrations
+
+| Source | What's new |
+|---|---|
+| **ClickHouse** | Read-only warehouse mounting with server timeout and KILL QUERY |
+| **Databricks** | Follows result chunk links to retain all rows |
+| **Snowflake** | Reads result partitions by statement handle |
+| **WebDAV** | URL escapes preserved |
+| **GitHub** | Preserves unchanged issue comments on incremental sync |
+| **Source Push** (ADR 0054) | `POST /sources/{id}/statements` — structured data enters as open statements without LLM round-trip |
+
+### API & Contracts
+
+| Endpoint / Feature | Description |
+|---|---|
+| **Document Content API** (ADR 0052) | `GET /documents/{id}/content` serves retained original bytes; `GET /documents/{id}/versions` returns the version ledger |
+| **OIDC Token Exchange** (ADR 0066) | `POST /auth/oidc/exchange` — apps sharing the same IdP can swap a fresh ID token for a Utopia session |
+| **RDF Export: Contested Facts** (ADR 0062) | Export includes `utopia:FactConflict` and `utopia:AxiomViolation` resources |
+| **SHACL Import** | A SHACL shape gives a property the domain and range it does not declare |
+| **Expression Validation** (ADR 0049) | Rule expressions validated for unit compatibility at write time |
+| **Action Dispatch** (ADR 0050) | Durable at-most-once execution model for external action dispatch |
+
+### Infrastructure
+
+- **Multi-arch Docker images** — linux/amd64 + linux/arm64
+- **CI overhaul** — lint, test, build as parallel jobs; all tests run against real Postgres
+- **Performance** — ontology views optimized (LEFT JOIN + concurrent fetch); graph rebuilds sped up with FK indexes; embedding reused per chat turn; governance serialized (no 10x concurrent duplication)
+- **Security** — login response time equalized (timing attack fix); PAT expiration validated before issuance; vector index built by table-owning role
+- **Workspace reasoning effort** — every model call respects the workspace setting; alignment no longer thinks on its own
+
+### Architecture Decision Records (ADRs 0049–0066)
+
+| ADR | Title |
+|---|---|
+| 0049 | Expression declarations are checked when a rule is written |
+| 0050 | An action attempt keeps its identity and uncertain outcome |
+| 0051 | A human phrase decision carries its materialization work |
+| 0052 | Document content is a read contract over the retained ledger |
+| 0053 | A phrase decision records the inputs it considered |
+| 0054 | A source may push statements in the open contract |
+| 0060 | A rule's definition has a history |
+| 0061 | The ontology is proposed from the open graph and judged by its questions |
+| 0062 | The export says what is contested |
+| 0063 | Stopping a chat ends the generation |
+| 0064 | Extraction reads time as it goes |
+| 0065 | The OCR reader chooses its provider |
+| 0066 | Another app may trade a fresh ID token for a session |
+
+---
 
 ## Relations
 

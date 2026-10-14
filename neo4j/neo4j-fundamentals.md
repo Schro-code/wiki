@@ -143,7 +143,7 @@ The `AS` keyword defines an alias for the returned value.
 
 ## Relations
 
-- [[graphrag/graph-construction]] — GraphRAG uses knowledge graphs built on top of graph database concepts; Neo4j is a common backend for production GraphRAG deployments
+- [[graphrag/microsoft-graphrag]] — GraphRAG uses knowledge graphs built on top of graph database concepts; Neo4j is a common backend for production GraphRAG deployments
 
 ## Tags
 

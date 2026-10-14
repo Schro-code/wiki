@@ -1,6 +1,6 @@
 ---
 domain: inference-engineering
-tags: [#inference-engineering]
+tags: [inference-engineering]
 sources: []
 updated: 2026-10-08
 ---
@@ -9,7 +9,7 @@ updated: 2026-10-08
 
 ## What it is
 
-A JSON wire protocol for sending messages to a language model and receiving responses. The core endpoint is `POST /v1/chat/completions`. OpenAI defined it, but it has become the de facto standard for the entire industry: Ollama, LiteLLM, vLLM, LM Studio, and dozens of other runtimes all implement it, so the same client code works against any of them.
+A JSON wire protocol for sending messages to a language model and receiving responses. The core endpoint is `POST /v1/chat/completions`. OpenAI defined it, but it has become the de facto standard for the entire industry: Ollama, LiteLLM, vLLM, LM Studio, and dozens of other runtimes all implement it, so the same client code◊ works against any of them.
 
 ## What problem it solves
 

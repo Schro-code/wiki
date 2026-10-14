@@ -1,7 +1,7 @@
 ---
 type: index
 level: root
-updated: 2026-09-07
+updated: 2026-10-14
 ---
 
 # Wiki — Domain Index
@@ -25,6 +25,7 @@ Wiki entry point. Read this file at the start of each session to understand what
 | [[agentic-system-design/index\|agentic-system-design]] | Design discipline for LLM-powered agent systems: patterns, failure modes, trade-offs, literature map, and search terms |
 | [[tts/index\|tts]] | Text-to-speech systems: digital audio, FFT, mel spectrogram, acoustic model, vocoder, Kokoro |
 | [[inference-engineering/index\|inference-engineering]] | Serving and operating LLMs locally: model formats, quantization, inference servers, gateways, and observability |
+| [[scm/index\|scm]] | Software Configuration Management — versioning, branching, fork management, release engineering, supply chain |
 
 ## How to navigate
 

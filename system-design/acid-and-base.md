@@ -7,11 +7,11 @@ updated: 2026-09-01
 
 # ACID and BASE
 
-## What they are
+## What it is
 
 Two consistency models for databases. ACID prioritizes correctness. BASE prioritizes availability and scale. They represent different answers to the same question: what guarantees does the database make when something goes wrong?
 
-## What problem they solve
+## What problem it solves
 
 As systems grow — more data, more users, more machines — databases face a choice: stay perfectly consistent (slow, harder to scale) or stay available and accept temporary inconsistency (fast, scales globally). ACID and BASE are the two sides of that trade-off.
 

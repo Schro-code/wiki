@@ -11,6 +11,10 @@ updated: 2026-08-25
 
 Minikube runs a single-node Kubernetes cluster on your local machine for development and learning.
 
+## What problem it solves
+
+Setting up a real Kubernetes cluster requires multiple machines and significant infrastructure. Minikube gives you a fully functional single-node cluster locally so you can develop, test manifests, and learn Kubernetes without cloud costs or infrastructure complexity.
+
 ## Notes
 
 ### Start the cluster

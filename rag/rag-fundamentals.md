@@ -410,7 +410,7 @@ ColBERT costs 2.6x latency and ~758x storage. Only invest in it if negation quer
 ## Relations
 
 - [[lda-vectordb-benchmark]] — hands-on project that produced all benchmark data on this page
-- [[graphrag/graph-construction]] — alternative to RAG: replaces vector search with a knowledge graph; better for global questions, worse for specific lookups
+- [[graphrag/microsoft-graphrag]] — alternative to RAG: replaces vector search with a knowledge graph; better for global questions, worse for specific lookups
 
 ## Tags
 

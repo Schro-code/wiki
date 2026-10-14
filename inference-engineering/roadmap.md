@@ -1,6 +1,6 @@
 ---
 domain: inference-engineering
-tags: [#inference-engineering]
+tags: [inference-engineering]
 sources: []
 updated: 2026-10-08
 ---

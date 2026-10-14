@@ -1,6 +1,6 @@
 ---
 domain: agent-knowledge
-tags: [#agent-knowledge]
+tags: [agent-knowledge]
 sources: []
 updated: 2026-09-30
 ---

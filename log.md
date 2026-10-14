@@ -273,3 +273,35 @@ Nueva página rdf-owl-turtle.md en agent-knowledge. Cubre: diferencia RDF vs OWL
 ## [2026-10-08] ingest | Inference Engineering — new domain created
 
 ## [2026-10-08] ingest | OpenAI API standard — new page in inference-engineering
+
+## [2026-10-09] lint | Full ritual audit — 18 issues found, 17 fixed
+
+Fixes applied:
+- 4 broken wikilinks repaired (graph-construction→microsoft-graphrag ×2, agentic-rag→chapter3-agentic-rag, ../rag/graphrag→graphrag/microsoft-graphrag)
+- 9 phantom pages removed from inference-engineering/index.md (listed but never created)
+- 3 tag format fixes (removed # prefix from YAML tags in rdf-owl-turtle, openai-api-standard, roadmap)
+- Registered #book tag in tags.md for ai-agent-book reference material
+- Root index.md updated date corrected (2026-09-07 → 2026-10-09)
+- Template headings standardized: acid-and-base, cap-and-pacelc ("What they are/solve" → "What it is/solves")
+- Missing "What problem it solves" sections added to kubectl-commands and minikube
+- coding-agent-inference-infra lab registered in labs/index.md
+- 6 lab wiki note files created (guardian-agent, lda-vectordb-benchmark, terraform, terraform-tutorial, terraform-azure, learn-terraform-docker-container)
+
+Open items not fixed:
+- projects/utopia/ empty folder (deletion denied by user)
+- consistent-hashing and rate-limiter sources: URLs instead of raw/ paths (requires fetching external content)
+- 8 chapter3-*.md sources reference ai-agent-book/chapter3.md instead of raw/ paths (book is embedded reference material, not in raw/)
+- 3 unreferenced raw/ files (GraphRAG Prompt Tuning Overview, Software Engineering Fundamentals, System Design)
+- 14 raw/ files use YAML frontmatter instead of plain Source: header
+- Extra top-level ## sections in dns, ip-addresses, microsoft-graphrag (structural preference, content is correct)
+- Content spread across custom ## sections in ipc-transports, utopia, roadmap (structural preference, content is correct)
+
+## [2026-10-09] ingest | local-inference-stack lab created in labs/
+
+## [2026-10-14] ingest | SCM — new domain created
+
+New domain: scm (Software Configuration Management). 1 page: scm.md. Covers: what SCM is, key subdomains (branching strategies, fork management, release engineering, patch series, supply chain), fork management patterns comparison table (merge-based, rebase-based, layered architecture, vendor branch), key principles (minimize delta, merge don't cherry-pick, upstream-first, layered customization), and key references. Written from session conversation about maintaining the LDA fork of deeplethe/utopia.
+
+## [2026-10-14] ingest | SCM — fork-management page created
+
+New page: scm/fork-management. Covers: vocabulary (upstream, downstream, delta, carry patches), the three sync approaches (merge-based, rebase-based, layered architecture) with diagrams, cherry-pick as anti-pattern, 7 tactics to reduce delta (upstream-first, runtime config, composition, override files, build args, extension points, git attributes), the tactic ladder summary, choosing an approach by situation.

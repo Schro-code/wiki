@@ -7,11 +7,11 @@ updated: 2026-09-01
 
 # CAP and PACELC
 
-## What they are
+## What it is
 
 Two theorems that describe the fundamental trade-offs in distributed systems. CAP defines what guarantees a distributed system can make during a network failure. PACELC extends CAP to cover normal operation — where latency, not failure, is the bottleneck.
 
-## What problem they solve
+## What problem it solves
 
 When data lives on multiple machines, those machines can lose contact with each other (a partition). CAP and PACELC force you to be explicit about what your system does in that situation — and in normal operation too.
 

@@ -11,6 +11,10 @@ updated: 2026-08-25
 
 `kubectl` is the CLI to interact with a Kubernetes cluster — deploy, inspect, and manage resources.
 
+## What problem it solves
+
+Kubernetes resources are declared in YAML but managed through the API server. kubectl provides a human-friendly interface to create, inspect, update, and delete those resources without writing API calls directly.
+
 ## Notes
 
 ### Apply and delete manifests

@@ -81,7 +81,7 @@ Standard conversation-history chunking creates isolated chunks with no inter-chu
 
 Now the agent sees not just the content of each chunk, but **who said it, when, and in what intent context**. Factual contradictions across sessions become resolvable — the agent has the temporal and authorship metadata needed to determine which instruction is authoritative.
 
-This is the fix for the multi-session contradiction problem in [[agentic-rag#Applying agentic RAG to user memory]].
+This is the fix for the multi-session contradiction problem in [[chapter3-agentic-rag#Applying agentic RAG to user memory]].
 
 ---
 

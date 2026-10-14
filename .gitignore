@@ -4,6 +4,9 @@
 # Projects folder contains work/private content
 /projects/
 
+# Raw sources (private/large files)
+/raw/
+
 # Claude Code project settings (local only)
 .claude/
 
