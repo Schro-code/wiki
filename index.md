@@ -1,7 +1,7 @@
 ---
 type: index
 level: root
-updated: 2026-10-14
+updated: 2026-10-16
 ---
 
 # Wiki — Domain Index
@@ -26,6 +26,7 @@ Wiki entry point. Read this file at the start of each session to understand what
 | [[tts/index\|tts]] | Text-to-speech systems: digital audio, FFT, mel spectrogram, acoustic model, vocoder, Kokoro |
 | [[inference-engineering/index\|inference-engineering]] | Serving and operating LLMs locally: model formats, quantization, inference servers, gateways, and observability |
 | [[scm/index\|scm]] | Software Configuration Management — versioning, branching, fork management, release engineering, supply chain |
+| [[devops/index\|devops]] | DevOps — culture, CI/CD pipelines, branching strategies, environments, and deployment strategies |
 
 ## How to navigate
 

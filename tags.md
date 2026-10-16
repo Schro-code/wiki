@@ -19,3 +19,4 @@ Never invent a new tag without adding it here first.
 | #inference-engineering | Pages about serving and operating LLMs: model formats, quantization, inference engines (Ollama, llama.cpp), gateways (LiteLLM), and observability |
 | #book | Reference material from a complete book embedded in a domain folder — not a wiki concept page |
 | #scm | Pages about software configuration management: versioning, branching, fork management, release engineering, patch series, supply chain |
+| #devops | Pages about DevOps practices: CI/CD pipelines, branching strategies, environments, deployment strategies, DORA metrics, culture |

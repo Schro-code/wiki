@@ -305,3 +305,9 @@ New domain: scm (Software Configuration Management). 1 page: scm.md. Covers: wha
 ## [2026-10-14] ingest | SCM — fork-management page created
 
 New page: scm/fork-management. Covers: vocabulary (upstream, downstream, delta, carry patches), the three sync approaches (merge-based, rebase-based, layered architecture) with diagrams, cherry-pick as anti-pattern, 7 tactics to reduce delta (upstream-first, runtime config, composition, override files, build args, extension points, git attributes), the tactic ladder summary, choosing an approach by situation.
+
+## [2026-10-15] ingest | SCM — fork-development-workflow page created
+
+## [2026-10-16] ingest | DevOps — new domain, 5 pages
+
+New domain: devops. Pages created: devops-overview (culture, Three Ways, CALMS, DORA metrics, DevOps vs SRE vs Platform Eng), branching-strategies (Gitflow vs GitHub Flow vs trunk-based, user's dev/main model situated), ci-cd-pipeline (all pipeline stages beyond lint+test, pipeline-as-code, artifact principle, branch-stage mapping), environments (dev/staging/prod purposes, parity, ephemeral envs, config injection), deployment-strategies (recreate, rolling, blue-green, canary, feature flags, expand-contract DB migrations). Updated Wiki/index.md and Wiki/tags.md.
