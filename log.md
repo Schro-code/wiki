@@ -311,3 +311,13 @@ New page: scm/fork-management. Covers: vocabulary (upstream, downstream, delta, 
 ## [2026-10-16] ingest | DevOps — new domain, 5 pages
 
 New domain: devops. Pages created: devops-overview (culture, Three Ways, CALMS, DORA metrics, DevOps vs SRE vs Platform Eng), branching-strategies (Gitflow vs GitHub Flow vs trunk-based, user's dev/main model situated), ci-cd-pipeline (all pipeline stages beyond lint+test, pipeline-as-code, artifact principle, branch-stage mapping), environments (dev/staging/prod purposes, parity, ephemeral envs, config injection), deployment-strategies (recreate, rolling, blue-green, canary, feature flags, expand-contract DB migrations). Updated Wiki/index.md and Wiki/tags.md.
+
+## [2026-10-19] ingest | Testing — new domain, 5 pages (test-pyramid, end-to-end-testing, smoke-testing, integration-testing, learning-plan)
+
+## [2026-10-20] ingest | Testing — flakiness page created
+
+New page: testing/flakiness. Covers: what flakiness is, the five root causes (timing, shared state, test data, external dependencies, animations/transitions) each with concrete examples and fixes, how causes compound, and the retries trap. Includes 5-question quiz. Corresponds to node 3 of the testing learning plan.
+
+## [2026-10-20] ingest | Testing — domain refactor: 2 new pages, 4 diagrams, learning path consolidation
+
+Refactored the testing domain. New pages: unit-testing (base layer, isolation, Arrange-Act-Assert, speed advantage), test-doubles (taxonomy: dummy/stub/spy/mock/fake, state vs behavior verification, over-mocking trap). Added Mermaid diagrams to: test-pyramid (block-beta pyramid), end-to-end-testing (sequence diagram of browser mechanics), smoke-testing (deployment pipeline flowchart with gates), flakiness (diagnostic decision tree for 5 root causes). Absorbed learning-plan into test-pyramid as a "Learning path" section. Removed learning-plan from index. Updated cross-references across all pages.

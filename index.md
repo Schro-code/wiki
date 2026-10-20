@@ -27,6 +27,7 @@ Wiki entry point. Read this file at the start of each session to understand what
 | [[inference-engineering/index\|inference-engineering]] | Serving and operating LLMs locally: model formats, quantization, inference servers, gateways, and observability |
 | [[scm/index\|scm]] | Software Configuration Management — versioning, branching, fork management, release engineering, supply chain |
 | [[devops/index\|devops]] | DevOps — culture, CI/CD pipelines, branching strategies, environments, and deployment strategies |
+| [[testing/index\|testing]] | Software testing strategy — test pyramid, e2e, smoke, integration, and when to use each |
 
 ## How to navigate
 
