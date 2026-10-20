@@ -321,3 +321,7 @@ New page: testing/flakiness. Covers: what flakiness is, the five root causes (ti
 ## [2026-10-20] ingest | Testing — domain refactor: 2 new pages, 4 diagrams, learning path consolidation
 
 Refactored the testing domain. New pages: unit-testing (base layer, isolation, Arrange-Act-Assert, speed advantage), test-doubles (taxonomy: dummy/stub/spy/mock/fake, state vs behavior verification, over-mocking trap). Added Mermaid diagrams to: test-pyramid (block-beta pyramid), end-to-end-testing (sequence diagram of browser mechanics), smoke-testing (deployment pipeline flowchart with gates), flakiness (diagnostic decision tree for 5 root causes). Absorbed learning-plan into test-pyramid as a "Learning path" section. Removed learning-plan from index. Updated cross-references across all pages.
+
+## [2026-10-20] ingest | DevOps — terraform page created
+
+New page: devops/terraform. Learning guide covering Terraform fundamentals in three phases: reading HCL configs (file conventions, terraform/provider/resource/data/variable/output blocks, referencing syntax, reading plan output), the mental model (declarative vs imperative, dependency graph, CRUD lifecycle, mutable vs immutable changes, drift detection), and commands (init, plan, apply, destroy). Includes self-assessment quiz. Registered #iac and #terraform tags.

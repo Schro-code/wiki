@@ -1,7 +1,7 @@
 ---
 domain: devops
 type: index
-updated: 2026-10-16
+updated: 2026-10-20
 ---
 
 # DevOps — Domain Index
@@ -17,3 +17,4 @@ Practices, culture, and tooling for continuously delivering reliable software. C
 | [[ci-cd-pipeline]] | Look when understanding what a CI/CD pipeline does beyond tests and linting: all stages, pipeline-as-code, the artifact principle, and branch-to-stage mapping | Session conversation |
 | [[environments]] | Look when reasoning about dev/staging/prod: what each environment is for, environment parity, ephemeral preview environments, and how configuration differs per env | Session conversation |
 | [[deployment-strategies]] | Look when you need to replace a running service with a new version: recreate, rolling, blue-green, canary, feature flags, and the database migration problem | Session conversation |
+| [[terraform]] | Look when you need to understand Terraform fundamentals: declarative IaC, state, plan/apply lifecycle, dependency graph, drift detection, HCL syntax | Session conversation |

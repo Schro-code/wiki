@@ -21,3 +21,5 @@ Never invent a new tag without adding it here first.
 | #scm | Pages about software configuration management: versioning, branching, fork management, release engineering, patch series, supply chain |
 | #devops | Pages about DevOps practices: CI/CD pipelines, branching strategies, environments, deployment strategies, DORA metrics, culture |
 | #testing | Pages about software testing strategy: test pyramid, end-to-end testing, smoke testing, integration testing, flakiness, test tooling |
+| #iac | Pages about Infrastructure as Code: declarative provisioning, state management, drift detection, idempotent deployments |
+| #terraform | Pages about HashiCorp Terraform specifically: HCL syntax, providers, modules, plan/apply lifecycle, workspaces |
