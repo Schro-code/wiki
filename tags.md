@@ -23,3 +23,4 @@ Never invent a new tag without adding it here first.
 | #testing | Pages about software testing strategy: test pyramid, end-to-end testing, smoke testing, integration testing, flakiness, test tooling |
 | #iac | Pages about Infrastructure as Code: declarative provisioning, state management, drift detection, idempotent deployments |
 | #terraform | Pages about HashiCorp Terraform specifically: HCL syntax, providers, modules, plan/apply lifecycle, workspaces |
+| #archify | Pages about the archify skill: two-stage pipeline, JSON schema contract, diagram type selection, explainer mode |

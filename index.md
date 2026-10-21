@@ -28,6 +28,7 @@ Wiki entry point. Read this file at the start of each session to understand what
 | [[scm/index\|scm]] | Software Configuration Management — versioning, branching, fork management, release engineering, supply chain |
 | [[devops/index\|devops]] | DevOps — culture, CI/CD pipelines, branching strategies, environments, and deployment strategies |
 | [[testing/index\|testing]] | Software testing strategy — test pyramid, e2e, smoke, integration, and when to use each |
+| [[archify/index\|archify]] | Archify skill internals — two-stage pipeline, JSON schema contract, diagram type selection, explainer mode |
 
 ## How to navigate
 

@@ -325,3 +325,7 @@ Refactored the testing domain. New pages: unit-testing (base layer, isolation, A
 ## [2026-10-20] ingest | DevOps — terraform page created
 
 New page: devops/terraform. Learning guide covering Terraform fundamentals in three phases: reading HCL configs (file conventions, terraform/provider/resource/data/variable/output blocks, referencing syntax, reading plan output), the mental model (declarative vs imperative, dependency graph, CRUD lifecycle, mutable vs immutable changes, drift detection), and commands (init, plan, apply, destroy). Includes self-assessment quiz. Registered #iac and #terraform tags.
+
+## [2026-10-21] ingest | Archify — new domain, 4 pages
+
+New domain: archify. Pages created: two-stage-pipeline (Claude writes JSON spec → Node.js renderer → HTML, separation of concerns, diagnostics), json-schema-contract (12 schemas as contract between Claude and renderer, validation, capability ceiling), diagram-type-selection (10 types, question-based selection heuristic, workflow vs sequence distinction), explainer-mode (same two-stage pattern for full-page documents). Updated Wiki/index.md and Wiki/tags.md (#archify).
