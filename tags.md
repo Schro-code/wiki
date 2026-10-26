@@ -24,3 +24,5 @@ Never invent a new tag without adding it here first.
 | #iac | Pages about Infrastructure as Code: declarative provisioning, state management, drift detection, idempotent deployments |
 | #terraform | Pages about HashiCorp Terraform specifically: HCL syntax, providers, modules, plan/apply lifecycle, workspaces |
 | #archify | Pages about the archify skill: two-stage pipeline, JSON schema contract, diagram type selection, explainer mode |
+| #neuroscience | Pages about how the brain works: learning signals, neuromodulators, neural coding |
+| #reward-learning | Pages about learning from reward and prediction error: RPE, TD learning, blocking, reward-driven behavior |
