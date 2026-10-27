@@ -1,7 +1,7 @@
 ---
 type: index
 level: root
-updated: 2026-10-26
+updated: 2026-10-27
 ---
 
 # Wiki — Domain Index
@@ -29,7 +29,7 @@ Wiki entry point. Read this file at the start of each session to understand what
 | [[devops/index\|devops]] | DevOps — culture, CI/CD pipelines, branching strategies, environments, and deployment strategies |
 | [[testing/index\|testing]] | Software testing strategy — test pyramid, e2e, smoke, integration, and when to use each |
 | [[archify/index\|archify]] | Archify skill internals — two-stage pipeline, JSON schema contract, diagram type selection, explainer mode |
-| [[neuroscience/index\|neuroscience]] | Neuroscience of learning — reward prediction error, temporal-difference learning, blocking, dopamine (wanting vs liking), open questions, and applying the theory to habits |
+| [[neuroscience/index\|neuroscience]] | Neuroscience of learning and effort — effort conditioning (learned industriousness, peak-end), a discipline playbook with evidence map, and reward prediction error theory (TD learning, blocking, wanting vs liking) |
 
 ## How to navigate
 

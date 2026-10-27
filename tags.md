@@ -26,3 +26,4 @@ Never invent a new tag without adding it here first.
 | #archify | Pages about the archify skill: two-stage pipeline, JSON schema contract, diagram type selection, explainer mode |
 | #neuroscience | Pages about how the brain works: learning signals, neuromodulators, neural coding |
 | #reward-learning | Pages about learning from reward and prediction error: RPE, TD learning, blocking, reward-driven behavior |
+| #habits | Pages about habit formation, discipline and behavior change: effort conditioning, rewiring rules, peak-end, self-experiments |
