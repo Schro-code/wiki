@@ -16,6 +16,11 @@ Personal knowledge base covering AI/ML systems, infrastructure, and software eng
 | `kubernetes/` | kubectl, kustomize, minikube |
 | `harness/` | AI agent harness — the scaffolding layer that wraps LLMs into acting agents |
 | `tts/` | Text-to-speech: mel spectrogram, acoustic model, vocoder, Kokoro |
+| `scm/` | Software Configuration Management — versioning, branching, fork management, release engineering, supply chain |
+| `devops/` | DevOps — culture, CI/CD pipelines, branching strategies, environments, deployment strategies |
+| `testing/` | Software testing strategy — test pyramid, e2e, smoke, integration, and when to use each |
+| `archify/` | Archify skill internals — two-stage pipeline, JSON schema contract, diagram type selection, explainer mode |
+| `neuroscience/` | Neuroscience of learning and effort — effort conditioning (learned industriousness, peak-end), a discipline playbook with evidence map, and reward prediction error theory |
 | `synthesis/` | Pages that integrate two or more domains |
 
 ## Structure
