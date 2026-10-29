@@ -21,6 +21,7 @@ Personal knowledge base covering AI/ML systems, infrastructure, and software eng
 | `testing/` | Software testing strategy — test pyramid, e2e, smoke, integration, and when to use each |
 | `archify/` | Archify skill internals — two-stage pipeline, JSON schema contract, diagram type selection, explainer mode |
 | `neuroscience/` | Neuroscience of learning and effort — effort conditioning (learned industriousness, peak-end), a discipline playbook with evidence map, and reward prediction error theory |
+| `knowledge-catalog/` | Google Cloud Knowledge Catalog — what it does and doesn't, Knowledge Studio, and a hands-on PDF scan test |
 | `synthesis/` | Pages that integrate two or more domains |
 
 ## Structure

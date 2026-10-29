@@ -27,3 +27,4 @@ Never invent a new tag without adding it here first.
 | #neuroscience | Pages about how the brain works: learning signals, neuromodulators, neural coding |
 | #reward-learning | Pages about learning from reward and prediction error: RPE, TD learning, blocking, reward-driven behavior |
 | #habits | Pages about habit formation, discipline and behavior change: effort conditioning, rewiring rules, peak-end, self-experiments |
+| #knowledge-catalog | Pages about Google Cloud Knowledge Catalog (formerly Dataplex Universal Catalog): metadata catalog, Cloud Storage discovery, business glossary, Knowledge Studio, context sets |
