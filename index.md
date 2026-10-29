@@ -1,7 +1,7 @@
 ---
 type: index
 level: root
-updated: 2026-10-27
+updated: 2026-10-28
 ---
 
 # Wiki — Domain Index
@@ -30,6 +30,7 @@ Wiki entry point. Read this file at the start of each session to understand what
 | [[testing/index\|testing]] | Software testing strategy — test pyramid, e2e, smoke, integration, and when to use each |
 | [[archify/index\|archify]] | Archify skill internals — two-stage pipeline, JSON schema contract, diagram type selection, explainer mode |
 | [[neuroscience/index\|neuroscience]] | Neuroscience of learning and effort — effort conditioning (learned industriousness, peak-end), a discipline playbook with evidence map, and reward prediction error theory (TD learning, blocking, wanting vs liking) |
+| [[knowledge-catalog/index\|knowledge-catalog]] | Google Cloud Knowledge Catalog — the company's map of data, Knowledge Studio (AI reads documents to define business terms), and a hands-on PDF scan test |
 
 ## How to navigate
 
