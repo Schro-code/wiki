@@ -31,6 +31,7 @@ Wiki entry point. Read this file at the start of each session to understand what
 | [[archify/index\|archify]] | Archify skill internals — two-stage pipeline, JSON schema contract, diagram type selection, explainer mode |
 | [[neuroscience/index\|neuroscience]] | Neuroscience of learning and effort — effort conditioning (learned industriousness, peak-end), a discipline playbook with evidence map, and reward prediction error theory (TD learning, blocking, wanting vs liking) |
 | [[knowledge-catalog/index\|knowledge-catalog]] | Google Cloud Knowledge Catalog — the company's map of data, Knowledge Studio (AI reads documents to define business terms), and a hands-on PDF scan test |
+| [[azure/index\|azure]] | Microsoft Azure for the AZ-204 certification — containers, App Service, Functions, Cosmos DB, messaging (Service Bus, Event Grid, Event Hubs), storage, identity (Entra ID, RBAC), APIM and monitoring |
 
 ## How to navigate
 
