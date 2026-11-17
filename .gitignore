@@ -22,3 +22,9 @@
 raw/**/*.pdf
 raw/**/*.mp4
 raw/**/*.zip
+
+# Playwright test runner cache (local only)
+.playwright-mcp/
+
+#archify cache (local only)
+.archify/
