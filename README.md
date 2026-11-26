@@ -23,6 +23,7 @@ Personal knowledge base covering AI/ML systems, infrastructure, and software eng
 | `neuroscience/` | Neuroscience of learning and effort — effort conditioning (learned industriousness, peak-end), a discipline playbook with evidence map, and reward prediction error theory |
 | `knowledge-catalog/` | Google Cloud Knowledge Catalog — what it does and doesn't, Knowledge Studio, and a hands-on PDF scan test |
 | `azure/` | Microsoft Azure for the AZ-204 certification — compute, storage, messaging, identity, APIM and monitoring |
+| `aws/` | AWS networking and compute foundations from hands-on labs — VPC, subnets, routing, security groups, EC2, load balancing and Auto Scaling |
 | `synthesis/` | Pages that integrate two or more domains |
 
 ## Structure

@@ -1,7 +1,7 @@
 ---
 type: index
 level: root
-updated: 2026-10-28
+updated: 2026-11-26
 ---
 
 # Wiki — Domain Index
@@ -32,6 +32,7 @@ Wiki entry point. Read this file at the start of each session to understand what
 | [[neuroscience/index\|neuroscience]] | Neuroscience of learning and effort — effort conditioning (learned industriousness, peak-end), a discipline playbook with evidence map, and reward prediction error theory (TD learning, blocking, wanting vs liking) |
 | [[knowledge-catalog/index\|knowledge-catalog]] | Google Cloud Knowledge Catalog — the company's map of data, Knowledge Studio (AI reads documents to define business terms), and a hands-on PDF scan test |
 | [[azure/index\|azure]] | Microsoft Azure for the AZ-204 certification — containers, App Service, Functions, Cosmos DB, messaging (Service Bus, Event Grid, Event Hubs), storage, identity (Entra ID, RBAC), APIM and monitoring |
+| [[aws/index\|aws]] | AWS networking and compute foundations from hands-on labs — VPC, subnets, route tables, internet gateway, security groups, EC2, load balancing, launch templates and Auto Scaling |
 
 ## How to navigate
 
